@@ -1,0 +1,629 @@
+// mystyle navbar
+
+
+// NAV SPECIFIC CLASSES
+
+// responsive visibility
+@include mystyle-navigation(desktop) {
+	.hidden-nav-desktop {
+		display: none;
+	}
+}
+@include mystyle-navigation(mobile) {
+	.hidden-nav-mobile {
+		display: none;
+	}
+}
+
+.nav-link-highlight {
+	color: $brand-primary !important;
+}
+
+
+// STANDARD STYLES INSPIRED BY BOOTSTRAP
+
+.mystyle-navbar-toggler {
+	padding: $dropdown-item-py $dropdown-item-px;
+	font-size: $navbar-toggler-font-size;
+	line-height: 1;
+	background: transparent; // remove default button style
+	border: none;
+	color: $color-mystyle-nav-text;
+	cursor: pointer;
+
+	@include hover-focus {
+		background-color: $color-mystyle-nav-bg-hover-desktop-level-1;
+		color: $color-mystyle-nav-text-hover;
+		text-decoration: none;
+	}
+}
+@include mystyle-navigation(desktop) {
+	.mystyle-navbar-toggler {
+		display: none;
+	}
+}
+
+.mystyle-navbar-brand {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: .33rem;
+	padding-bottom: .33rem;
+	font-size: $font-size-lg;
+	line-height: inherit;
+	white-space: nowrap;
+	max-width: 40vw;
+
+	@include hover-focus {
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.mystyle-nav-fill {
+	> li {
+    	flex: 1 1 auto;
+		text-align: center;
+	}
+}
+
+.navbar-container {
+	display: flex;
+	flex-direction: row;
+}
+
+
+// NAVBAR
+
+.mystyle-navbar {
+
+	padding-top: $mystyle-navbar-py;
+	padding-bottom: $mystyle-navbar-py;
+	background-color: $color-mystyle-nav-bg;
+	box-shadow: $mystyle-navbar-box-shadow;
+
+	// opened dropdown link
+	.show {
+
+		> a {
+			background-color: $color-mystyle-nav-bg-hover-desktop-level-1;
+			color: $color-mystyle-nav-text-hover;
+		}
+
+	}
+
+}
+
+// navbar mobile
+
+@include mystyle-navigation(mobile) {
+
+	.mystyle-navbar {
+		display: block;
+
+		> .container {
+			position: relative;
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+}
+
+// navbar desktop
+
+@include mystyle-navigation(desktop) {
+
+	.mystyle-navbar {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		.mystyle-navbar-nav {
+			flex-direction: row;
+
+			.nav-link {
+				padding-right: .5rem;
+				padding-left: .5rem;
+			}
+		}
+
+		> .container {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+	}
+
+}
+
+
+// NAVBAR COLLAPSE
+
+.mystyle-navbar-collapse {
+	display: flex;
+}
+
+// navbar collapse mobile
+
+@include mystyle-navigation(mobile) {
+
+	.mystyle-navbar-collapse {
+		position: fixed;
+		z-index: $mystyle-nav-z-index-navbar;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: $mystyle-nav-mobile-width;
+		max-width: $mystyle-nav-mobile-max-width;
+		background-color: $color-mystyle-nav-bg-mobile;
+		flex-direction: column-reverse;
+		justify-content: baseline;
+		transition: $mystyle-nav-transition;
+		transform: translate3d(-100%, 0px, 0px);
+
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	
+}
+
+// navbar collapse desktop
+
+@include mystyle-navigation(desktop) {
+
+	.mystyle-navbar-collapse {
+		flex-direction: row;
+		width: 100%;
+	}
+	
+}
+
+
+// NAVBAR NAV
+
+.mystyle-navbar-nav {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+
+	/*.nav-link {
+		padding-right: 0;
+		padding-left: 0;
+	}*/
+
+	li {
+
+		// link (all)
+		a {
+			font-weight: $nav-font-weight-default;
+			color: $color-mystyle-nav-dropdown-text;
+			display: block;
+			padding: $dropdown-item-py $dropdown-item-px;
+
+
+			// TODO: include responsive padding
+			//padding-left: $navbar-padding-x;
+			//padding-right: $navbar-padding-x;
+
+			//@include make-responsive-nav-padding();
+
+			@include hover-focus {
+				background-color: $color-mystyle-nav-bg-hover-mobile;
+				//background-color: $color-mystyle-nav-bg-hover-desktop-level-1;
+				color: $color-mystyle-nav-dropdown-text-hover;
+				text-decoration: none;
+			}
+			&:active {
+				color: $color-mystyle-nav-dropdown-text-active;
+			}
+
+		}
+
+	}
+
+	// icon level 1
+	> li {
+		> a {
+			color: $color-mystyle-nav-text;
+
+			.fa {
+				width: 16px;
+				color: $color-mystyle-nav-icon;
+				//min-height: $mystyle-vagbar-icon-line-height;
+				//line-height: $mystyle-vagbar-icon-line-height;
+			}
+
+			@include hover-focus {
+				color: $color-mystyle-nav-text-hover;
+
+				.fa {
+					color: $color-mystyle-nav-icon-hover;
+				}
+			}
+			&:active {
+				color: $color-mystyle-nav-text-active;
+
+				.fa {
+					color: $color-mystyle-nav-icon-active;
+				}
+			}
+
+			[class*="plenticon-"] {
+				//min-height: $mystyle-vagbar-icon-line-height;
+				//line-height: $mystyle-vagbar-icon-line-height;
+			}
+		}
+		> ul {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+}
+
+// navbar nav mobile
+
+@include mystyle-navigation(mobile) {
+	
+	.mystyle-navbar-nav:not(.mystyle-navbar-nav-allmedia) {
+
+		// main mobile styles
+		@include make-mobile-looking-navbar-nav();
+
+	}
+
+}
+
+// navbar nav desktop
+
+@include mystyle-navigation(desktop) {
+
+	.mystyle-navbar-nav:not(.mystyle-navbar-nav-allmedia) {
+
+		// main desktop styles
+		@include make-desktop-looking-navbar-nav();
+
+	}
+	
+}
+
+
+// MAIN NAVBAR NAV
+
+// main navbar nav mobile
+
+@include mystyle-navigation(mobile) {
+
+	.mystyle-navbar-nav.main-navbar-nav {
+		position: relative;
+		width: 100%;
+		overflow-y: auto;
+		border-top: $dropdown-border-width-a-mobile solid $color-mystyle-nav-a-border-mobile;
+
+		// each level has individual overflow
+		&,
+		& ul {
+			height: 100%;
+			overflow-x: hidden;
+		}
+		& ul {
+			overflow-y: hidden;
+		}
+
+		// hide overflow if subleve open
+		&.has-show,
+		& ul.has-show,
+		& li.show > ul.has-show {
+			overflow-y: hidden;
+		}
+
+		li {
+			a {
+				border-bottom: $dropdown-border-width-a-mobile solid $color-mystyle-nav-a-border-mobile;
+				//background-clip: padding-box;
+			}
+		}
+
+		// only subnav in main nav
+		li > ul {
+			position: absolute;
+			display: block;
+			left: 100%;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			background-color: $color-mystyle-nav-bg-mobile;
+			transition: $mystyle-nav-transition;
+			transform: translate3d(0, 0, 0);
+		}
+
+		li.show > ul {
+			transform: translate3d(-100%, 0, 0);
+			// allow overflow-y only while open
+			overflow-y: auto;
+		}
+
+	}
+	
+}
+
+// main navbar nav desktop
+
+@include mystyle-navigation(desktop) {
+
+	.mystyle-navbar-nav.main-navbar-nav {
+		margin-left: auto;
+		margin-right: auto;
+
+		// only level 1
+
+		> li {
+
+			// link (level 1)
+			& > a {
+
+				position: relative;
+
+				@if $conf-nav-uppercase-level-1 {
+					text-transform: uppercase;
+				}
+				/*padding-top: $mystyle-nav-item-py-level-1;
+				padding-bottom: $mystyle-nav-item-py-level-1;*/
+
+				// nav line
+				&::before {
+					content: "";
+					position: absolute;
+					left: $dropdown-item-px - $mystyle-nav-line-overlap-x;
+					right: $dropdown-item-px - $mystyle-nav-line-overlap-x;
+					bottom: $mystyle-nav-line-bottom;
+					height: 0.125em;
+					background: $color-mystyle-nav-line;
+					border-radius: 0.125em;
+					transform: scaleX(0);
+					transition: transform 0.2s ease-in-out 0s;
+				}
+
+			}
+
+			&.active a {
+				// nav line
+				&::before {
+					transform: scaleX(1);
+				}
+			}
+
+			a.mystyle-dropdown-toggle {
+				// nav line
+				&::before {
+					right: $dropdown-item-px - $mystyle-nav-line-overlap-x + ( ($mystyle-navbar-caret-width + $mystyle-nav-text-caret-spacer) * $mystyle-navbar-scale-caret );
+				}
+			}
+		}
+
+	}
+	
+}
+
+
+// ICON NAVBAR NAV
+
+.mystyle-navbar-nav.icon-navbar-nav {
+	display: inline-flex;
+	flex-direction: row;
+	//justify-content: flex-end;
+}
+
+
+// BACK BUTTON
+
+@include mystyle-navigation(mobile) {
+
+	.nav-item-back {
+		a {
+			&::before {
+				display: inline-block;
+				//width: 0;
+				height: #{$font-size-base}em;
+				//vertical-align: middle;
+				color: $color-mystyle-nav-icon;
+				content: $mystyle-navbar-icon-arrow-left;
+				font-family: $mystyle-navbar-icon-font-name;
+				margin-right: $mystyle-nav-icon-text-spacer;
+			}
+			&::after {
+				content: attr(data-label);
+			}
+			&:focus {
+				outline: 0;
+			}
+			@include hover-focus {
+				&::before {
+					color: $color-mystyle-nav-icon-hover;
+				}
+			}
+			&:active {
+				&::before {
+				 color: $color-mystyle-nav-icon-active;
+				}
+			}
+		}
+	}
+
+}
+
+
+// DROPDOWN TOGGLE
+
+.mystyle-dropdown-toggle {
+	&::after {
+		display: inline-block;
+		//width: 0;
+		height: $font-size-base;
+		vertical-align: middle;
+		margin-left: $mystyle-nav-icon-text-spacer;
+		content: $mystyle-navbar-icon-arrow-right;
+		font-family: $mystyle-navbar-icon-font-name;
+		color: $color-mystyle-nav-icon;
+	}
+	&:focus {
+		outline: 0;
+	}
+	@include hover-focus {
+		&::after {
+			color: $color-mystyle-nav-icon-hover;
+		}
+	}
+	&:active {
+		&::after {
+			color: $color-mystyle-nav-icon-active;
+		}
+	}
+}
+
+
+// BACKDROP (ONLY MOBILE)
+
+@include mystyle-navigation(mobile) {
+
+	// backdrop
+	.collapse-backdrop,
+	.nav-backdrop {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	// backdrop main nav
+	.mystyle-navbar-collapse.show ~ .collapse-backdrop {
+		position: fixed;
+		display: block;
+		z-index: $mystyle-nav-z-index-backdrop;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $color-mystyle-nav-backdrop-main;
+	}
+
+}
+
+
+// ALL MEDIA DROPDOWN
+
+// navbar nav
+.mystyle-navbar-nav.mystyle-navbar-nav-allmedia {
+
+	// main desktop styles
+	@include make-desktop-looking-navbar-nav();
+
+}
+
+
+// BIGMENU (ONLY DESKTOP)
+
+@include mystyle-navigation(desktop) {
+
+	// bigmenu
+	.dropdown-big {
+		position: static;
+
+		> ul {
+			left: 0;
+			right: 0;
+
+			ul {
+				display: block;
+			}
+		}
+	}
+
+	.main-navbar-nav {
+		.dropdown-big {
+
+			&[class*="columns-"] > ul {
+				column-gap: 0;
+			}
+			&.columns-2 > ul {
+				column-count: 2;
+			}
+			&.columns-3 > ul {
+				column-count: 3;
+			}
+			&.columns-4 > ul {
+				column-count: 4;
+			}
+			&.columns-5 > ul {
+				column-count: 5;
+			}
+
+			> ul {
+
+				> li {
+
+					> a {
+						font-weight: $nav-font-weight-big-level-2;
+						color: $color-mystyle-nav-big-level-2-text;
+
+						@include hover-focus {
+							color: $color-mystyle-nav-big-level-2-text-hover;
+						}
+						&:active {
+							color: $color-mystyle-nav-big-level-2-text-active;
+						}
+					}
+					> ul {
+						list-style-type: none;
+						padding: 0;
+					}
+				}
+
+				> li:not(.allow-column-break) {
+					break-inside: avoid-column;
+					overflow: hidden; // force firefox not to break inside column
+				}
+
+				a {
+					padding: $dropdown-big-item-py $dropdown-big-item-px;
+				}
+			}
+
+			// reset
+			> ul > li.active > .mystyle-dropdown-toggle:not(:hover):not(:focus) {
+				color: $color-mystyle-nav-text;
+				background-color: initial;
+			}
+		}
+	}
+
+}
+
+
+// ICON NAVBAR FILLED (ONLY MOBILE)
+
+@include mystyle-navigation(mobile) {
+
+	.icon-navbar-nav.mystyle-nav-fill {
+		position: relative;
+
+		> li {
+			position: static !important;
+
+			> ul {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+

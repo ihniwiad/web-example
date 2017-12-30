@@ -1,0 +1,47 @@
+// mixins responsive typo
+
+
+// ROOT FONT SIZE
+
+@mixin make-responsive-typo($font-sizes: $responsive-font-sizes) {
+
+	// remember size of previous screen interval
+	$remember-font-size: "";
+
+	@each $breakpoint, $font-size in $font-sizes {
+
+		// make style only if current screen interval has different size
+		@if $font-size != $remember-font-size {
+			@include media-breakpoint-up($breakpoint) {
+				font-size: $font-size;
+			}
+			$remember-font-size: $font-size;
+		}
+
+	}
+
+}
+
+@mixin make-progressive-display-font($font-scales: $progressive-font-scales) {
+
+	@each $breakpoint, $font-scale in $font-scales {
+
+		@include media-breakpoint-up($breakpoint) {
+			.display-1 {
+				font-size: $display1-size * $font-scale;
+			}
+			.display-2 {
+				font-size: $display2-size * $font-scale;
+			}
+			.display-3 {
+				font-size: $display3-size * $font-scale;
+			}
+			.display-4 {
+				font-size: $display4-size * $font-scale;
+			}
+			
+		}
+
+	}
+
+}

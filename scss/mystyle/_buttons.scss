@@ -1,0 +1,20 @@
+// button
+
+
+
+// button outline
+
+[class*="btn-outline-"] {
+	border-width: $button-outline-border-width;
+}
+
+// icon button
+
+.btn-only-icon {
+	padding-left: $input-btn-padding-y;
+	padding-right: $input-btn-padding-y;
+
+	#{$button-icon-font-selector} {
+		width: 1.25em;
+	}
+}

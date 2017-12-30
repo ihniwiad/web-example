@@ -1,0 +1,18 @@
+// mixing social links
+
+
+
+// make color & hover color classes
+@mixin make-social-link-color-classes($social-media-colors: $social-media-colors) {
+	@each $name, $color in $social-media-colors {
+	    .#{$social-media-color-prefix}#{$name} {
+	    	color: #{$color} !important;
+	    }
+	    .#{$social-media-color-hover-prefix}#{$name} {
+	        &:hover,
+	        &:focus {
+	            color: #{$color} !important;
+	        }
+	    }
+	}
+}

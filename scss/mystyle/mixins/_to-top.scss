@@ -1,0 +1,41 @@
+// mixins to top
+
+
+
+@mixin createSpacerForToTop($breakpoints: $grid-breakpoints) {
+	
+	$button-width: 60px; // ca. 50..60px
+	$button-height: $font-size-base * $line-height-base + $input-btn-padding-y;
+
+	@each $breakpoint, $screen-width in $breakpoints {
+
+		$loopPosition: index($breakpoints, ($breakpoint $screen-width));
+
+		// first
+		@if $loopPosition == 1 {
+		}
+		// second
+		@else if $loopPosition == 2 {
+			@media (max-width: $screen-width + $button-width) {
+				.page-footer > *:last-child {
+					margin-bottom: $button-height;
+				}
+			}
+		}
+		// all others
+		@else {
+			@media (min-width: $screen-width) and (max-width: $screen-width + $button-width) {
+				.page-footer > *:last-child {
+					margin-bottom: $button-height;
+				}
+			}
+		}
+
+		// last
+		@if $loopPosition = length($breakpoints) {
+		}
+
+	}
+
+}
+

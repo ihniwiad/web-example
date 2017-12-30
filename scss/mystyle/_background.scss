@@ -1,0 +1,58 @@
+// background
+
+
+// BACKGROUND IMAGES
+
+// TODO: add fallbacks for mobile-devices wich doesn't support fixed cover
+
+body:not(.is-ios):not(.is-android) .bg-fixed {
+	background-attachment: fixed;
+}
+.bg-cover {
+	background-size: cover;
+}
+.bg-contain {
+	background-size: contain;
+}
+
+// bg position
+.bg-c {
+	background-position: center;
+}
+.bg-rc {
+	background-position: right center;
+}
+.bg-33c {
+	background-position: 33% center;
+}
+.bg-66c {
+	background-position: 66% center;
+}
+.bg-80c {
+	background-position: 80% center;
+}
+.bg-66t {
+	background-position: 66% top;
+}
+@include media-breakpoint-up(md) {
+	.bg-center-md {
+		background-position: center;
+	}
+	.bg-66c-md {
+		background-position: 66% center;
+	}
+}
+
+
+
+// BACKGROUND COLOR BOXES
+
+.bg-white {
+	background-color: $mystyle-color-white;
+}
+.bg-white-transparent {
+	background-color: rgba($mystyle-color-white, $transparency-bg-light);
+}
+.bg-white-opaque {
+	background-color: rgba($mystyle-color-white, $transparency-bg-opaque-light);
+}

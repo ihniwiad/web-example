@@ -1,0 +1,13 @@
+// responsive typo
+
+
+
+// ROOT
+
+html {
+	@include make-responsive-typo();
+}
+
+// progressive font display-N
+
+@include make-progressive-display-font()

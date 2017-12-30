@@ -1,0 +1,359 @@
+//
+// mystyle variables
+//
+
+// PATHS
+
+// images
+$image-path:                     "../img/" !default;
+
+
+
+// COLORS
+
+
+// logo colors
+
+$mystyle-color-blue:              #0275d8 !default;
+$mystyle-color-lightblue:         #90b9d7 !default;
+$mystyle-color-red:               #d4021d !default;
+$mystyle-color-grey:              #707173 !default;
+
+
+// additional colors
+
+$mystyle-color-white:             #fff !default;
+$mystyle-color-black:             #000 !default;
+$mystyle-color-green:             #4cad33 !default;
+$mystyle-color-yellow:            #ffce36 !default;
+$mystyle-color-darkblue:          #354763 !default;
+
+$mystyle-color-blue-light:        #b0daf2 !default;
+$mystyle-color-red-light:         #f2a7ad !default;
+$mystyle-color-green-light:       #95cd8a !default;
+$mystyle-color-yellow-light:      #fee090 !default;
+
+$mystyle-color-blue-lightest:     #e5f4ff !default;
+$mystyle-color-red-lightest:      #ffe8e9 !default;
+$mystyle-color-green-lightest:    #dff2da !default;
+$mystyle-color-yellow-lightest:   #fff5d8 !default;
+
+
+// grey scale
+
+$mystyle-color-greyscale-1:       #fafafa !default;
+$mystyle-color-greyscale-2:       #f2f2f2 !default;
+$mystyle-color-greyscale-3:       #e0e0e0 !default;
+$mystyle-color-greyscale-4:       #999999 !default;
+$mystyle-color-greyscale-5:       #777777 !default;
+$mystyle-color-greyscale-6:       #555555 !default;
+$mystyle-color-greyscale-7:       #333333 !default;
+$mystyle-color-greyscale-8:       $mystyle-color-black !default;
+
+
+// country flags
+
+$color-flag-de-black:            #000 !default;
+$color-flag-de-red:              #f00 !default;
+$color-flag-de-yellow:           #fc0 !default;
+
+$color-flag-uk-blue:             #00247D !default;
+$color-flag-uk-white:            #fff !default;
+$color-flag-uk-red:              #CF142B !default;
+
+
+// special design colors
+
+$hight-contrast-ci-color:        $mystyle-color-red !default;
+
+
+// TRANSPARENCIES
+
+$transparency-bg-light:          0.6 !default;
+$transparency-bg-medium:         0.55 !default;
+$transparency-bg-dark:           0.5 !default;
+
+$transparency-bg-opaque-light:   0.85 !default;
+$transparency-bg-opaque-medium:  0.75 !default;
+$transparency-bg-opaque-dark:    0.65 !default;
+
+
+// GRID
+
+$padding-container-lr-md-up:     0 !default;
+
+$margin-bottom-standard:         1rem !default;
+$footer-margin-top:              $margin-bottom-standard * 2 !default;
+
+
+// RESPONSIVE TYPO
+
+$responsive-font-sizes: (
+	xs: 14px,
+	sm: 14px,
+	md: 15px,
+	lg: 16px,
+	xl: 18px
+) !default;
+$progressive-font-scales: (
+	xs: 0.5,
+	sm: 0.625,
+	md: 0.75,
+	lg: 0.875,
+	xl: 1
+) !default;
+
+
+// FONT
+
+$mystyle-font-family-sans-serif:  Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+// text shadow
+
+$text-shadow-dark:              0 0 0.1em rgba(0, 0, 0, 0.33) !default;
+$text-shadow-darker:            0 0 0.5em rgba(0, 0, 0, 0.8), 0 0 0.1em rgba(0, 0, 0, 0.5), 0 0 1px rgba(0, 0, 0, 0.5) !default;
+$text-shadow-darkest:           0 0 0.5em #000, 0 0 0.1em rgba(0, 0, 0, 1), 0 0 1px rgba(0, 0, 0, 1) !default;
+
+
+// TRANSITION
+
+$transition-standard:           all 0.3s ease !default;
+
+
+// BUTTON (ICON, OUTLINE)
+
+$button-outline-border-width:   2px !default;
+$button-distance-icon-text:     0.75em !default;
+$button-icon-font-selector:     ".fa" !default;
+
+
+// BORDER
+
+$mystyle-border-width:          1px !default;
+$mystyle-border-style:          solid !default;
+$mystyle-border-color:          rgba(0, 0, 0, 0.1) !default;
+
+
+
+//XX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX
+
+
+// OVERRIDE BOOTSTRAP STANDARDS
+
+// colors
+
+$black:                          $mystyle-color-black !default; // 000
+$red:                            $mystyle-color-red !default; // d9534f
+$yellow:                         $mystyle-color-yellow !default; // ffd500
+$green:                          $mystyle-color-green !default; // 5cb85c
+$blue:                           $mystyle-color-blue !default; // 0275d8
+$teal:                           $mystyle-color-lightblue !default; // 5bc0de
+
+$brand-primary:                  $mystyle-color-blue !default;
+
+// form
+
+$input-border-focus:             $mystyle-color-blue !default;
+
+// font
+
+$font-family-sans-serif:         $mystyle-font-family-sans-serif !default;
+$font-weight-base:               300 !default;
+$body-color:                     $mystyle-color-greyscale-7 !default;
+$headings-font-weight:           300 !default;
+$headings-color:                 $mystyle-color-blue !default;
+
+$lead-font-size:                 1.5rem !default;
+
+// card
+
+$card-border-radius:             0 !default;
+
+// breadcrumb
+$breadcrumb-divider:             "»" !default;
+$breadcrumb-item-padding:        0.25rem !default;
+
+
+
+//XX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX    XXXX
+
+
+// NAV (MYSTYLE NAVBAR)
+
+// ui
+$mystyle-nav-ui-min-height:      40px !default;
+
+
+// breakpoint
+$mystyle-nav-devide-mobile-desktop:      false !default; // default: true
+$mystyle-nav-breakpoint-mobile-down:     md !default; // default: md
+$mystyle-nav-breakpoint-desktop-up:      lg !default; // default: lg
+
+// nav transparency
+$transparency-nav-bg-light:             0.94 !default;
+$transparency-nav-dropdown-bg-light:    $transparency-nav-bg-light !default;
+$transparency-nav-bg-light-hover:       0.05 !default;
+$transparency-nav-a-border-mobile:      0.075 !default;
+
+
+// nav colors
+
+// nav bg
+$color-mystyle-nav-bg:                               rgba($mystyle-color-white, $transparency-nav-bg-light) !default; // header
+$color-mystyle-nav-bg-mobile:                        $mystyle-color-white !default; // mobile nav background
+$color-mystyle-nav-dropdown-bg:                      #eaeaea !default; // dropdown background
+
+// nav bg a hover
+$color-mystyle-nav-bg-hover-desktop-level-1:         $color-mystyle-nav-dropdown-bg !default; // hover desktop level 1
+$color-mystyle-nav-bg-hover-desktop-level-2:         rgba($mystyle-color-white, $transparency-nav-bg-light) !default; // hover desktop level 2..n
+$color-mystyle-nav-bg-hover-mobile:                  rgba($mystyle-color-black, $transparency-nav-bg-light-hover) !default; // hover mobile level 1..n
+
+// nav dropdown borders
+$color-mystyle-nav-dropdown-border-top-color:        transparent !default;
+$color-mystyle-nav-dropdown-border-bottom-color:     transparent !default;
+
+// nav text
+$color-mystyle-nav-text:                             $mystyle-color-greyscale-7 !default;
+$color-mystyle-nav-text-active:                      $color-mystyle-nav-text !default;
+$color-mystyle-nav-text-hover:                       #000 !default;
+
+// nav dropdown text
+$color-mystyle-nav-dropdown-text:                    $mystyle-color-greyscale-7 !default;
+$color-mystyle-nav-dropdown-text-active:             $color-mystyle-nav-text !default;
+$color-mystyle-nav-dropdown-text-hover:              #000 !default;
+
+// nav bigmenu text
+$color-mystyle-nav-big-level-2-text:                 $color-mystyle-nav-text !default;
+$color-mystyle-nav-big-level-2-text-active:          $color-mystyle-nav-big-level-2-text !default;
+$color-mystyle-nav-big-level-2-text-hover:           $color-mystyle-nav-text-hover !default;
+
+// nav mobile text
+$color-mystyle-nav-mobile-text:                      $mystyle-color-greyscale-7 !default;
+$color-mystyle-nav-mobile-text-active:               $color-mystyle-nav-text !default;
+$color-mystyle-nav-mobile-text-hover:                #000 !default;
+
+// nav icon
+$color-mystyle-nav-icon:                             $mystyle-color-greyscale-5 !default;
+$color-mystyle-nav-icon-active:                      $color-mystyle-nav-icon !default;
+$color-mystyle-nav-icon-hover:                       $mystyle-color-greyscale-7 !default;
+
+// nav line
+$color-mystyle-nav-line:                             $mystyle-color-blue !default; // $mystyle-color-greyscale-5 // desktop level 1 underline active item
+
+// nav backdrop
+$color-mystyle-nav-backdrop-main:                    rgba(0, 0, 0, 0.5) !default;
+$color-mystyle-nav-backdrop:                         rgba(0, 0, 0, 0.33) !default;
+
+// nav a border mobile
+$color-mystyle-nav-a-border-mobile:                  rgba($mystyle-color-black, $transparency-nav-a-border-mobile) !default;
+
+// shadow
+$mystyle-navbar-box-shadow:                          0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 15px 0 rgba(0, 0, 0, 0.05) !default;
+$mystyle-navbar-dropdown-box-shadow:                 0 1px 0.125rem 0 rgba(0, 0, 0, 0.25) !default;
+
+
+// nav font
+
+// font
+$nav-font-weight-default:           300 !default;
+$nav-font-weight-big-level-2:       400 !default;
+$conf-nav-uppercase-level-1:        false !default;
+
+// icons
+$mystyle-navbar-icon-font-name:      FontAwesome !default;
+$mystyle-navbar-icon-arrow-left:     "\f060" !default;
+$mystyle-navbar-icon-arrow-right:    "\f061" !default;
+$mystyle-navbar-icon-caret:          "\f078" !default;
+$mystyle-navbar-scale-caret:         0.5 !default;
+$mystyle-navbar-font-size-caret:     #{$mystyle-navbar-scale-caret}em !default; // use scale factor above for better calculation of dependent elements
+$mystyle-navbar-caret-width:         1em !default;
+$mystyle-nav-icon-text-spacer:       0.5em !default;
+$mystyle-nav-text-caret-spacer:      0.5em !default;
+
+// nav dimensions
+
+$mystyle-nav-z-index-navbar:         20 !default;
+$mystyle-nav-z-index-backdrop:       10 !default;
+
+$mystyle-navbar-py:                  0 !default;
+
+//$mystyle-nav-item-py-level-1:	    1em !default;
+
+$dropdown-item-px:                  0.66667em !default;
+$dropdown-item-py:                  0.66667em !default;
+$dropdown-big-item-px:              1.33333em !default;
+$dropdown-big-item-py:              0.5em !default;
+$dropdown-big-level-3-item-pl:      2 * $dropdown-big-item-px !default;
+
+$mystyle-nav-paddings-y: (
+	xs: 1em,
+	sm: 0.85rem,
+	md: 0.75rem
+) !default;
+
+
+$dropdown-border-top-width:      0.25em !default; // 0.25em
+$dropdown-border-bottom-width:   0.25em !default;
+
+$dropdown-border-width-a-mobile: 1px !default;
+
+$mystyle-navbar-toggler-top:      0.25em !default;
+$mystyle-navbar-toggler-right:    0.5em !default;
+
+$mystyle-vagbar-icon-line-height: 1.5em !default;
+
+
+// mobile nav container
+$mystyle-nav-mobile-width:        80% !default;
+$mystyle-nav-mobile-max-width:    30rem !default;
+
+// nav line (desktop level 1)
+$mystyle-nav-line-height:         0.125em !default;
+$mystyle-nav-line-bottom:         $dropdown-item-py * 0.5 + $mystyle-nav-line-height !default;
+$mystyle-nav-line-overlap-x:      0.05em !default;
+
+// dropdown item container, dropdown form
+$dropdown-item-container-px:     $dropdown-item-px !default;
+$dropdown-item-container-py:     $dropdown-item-py !default;
+
+// transitions
+$mystyle-nav-transition:          transform 0.3s ease-in-out;
+
+
+// BREADCRUMB
+
+$breadcrumb-link-color:          $mystyle-color-greyscale-5 !default;
+
+
+// VIDEO
+
+// play button overlay
+$play-button-width:              2.5em !default;
+$play-button-height:             1.5em !default;
+$play-button-padding-left:       0.1em !default;
+$play-button-font-size:          2rem !default;
+$play-button-border-raduis:      0.125em !default;
+$play-button-bg-color:           rgba($mystyle-color-black, 0.4) !default;
+$play-button-bg-color-hover:     rgba($mystyle-color-blue, 0.75) !default;
+$play-button-color:              rgba($mystyle-color-white, 0.8) !default;
+$play-button-color-hover:        $mystyle-color-white !default;
+$play-button-shadow-size:        0.25em !default;
+$play-button-shadow-color:       rgba($mystyle-color-white, 0.25) !default;
+$play-button-transition:         $transition-standard !default;
+
+
+// SOCIAL MEDIA
+
+$social-media-color-prefix:         "color-" !default;
+$social-media-color-hover-prefix:   "color-hover-" !default;
+$social-media-colors: (
+	facebook: "#3b5998", 
+	twitter: "#00aced", 
+	xing: "#B0D400", 
+	rss: "#FB9E3A"
+) !default;
+
+
+
+
+

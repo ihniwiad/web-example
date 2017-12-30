@@ -1,0 +1,28 @@
+// footer
+
+
+.page-footer {
+	margin-top: $footer-margin-top;
+	padding-bottom: 1.5em;
+	background-color: $mystyle-color-greyscale-1;
+	
+	a[href]:not([class*="color-"]) {
+		color: inherit;
+	}
+}
+
+.footer-logo {
+	filter: grayscale(100%) opacity(67%);
+	transition: $transition-standard;
+
+	&:hover {
+		filter: grayscale(0%) opacity(100%);
+	}
+}
+
+.social-list {
+	a[href] {
+		color: $mystyle-color-greyscale-4;
+		transition: $transition-standard;
+	}
+}

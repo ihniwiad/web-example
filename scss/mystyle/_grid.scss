@@ -1,0 +1,32 @@
+// grid
+
+
+// CONTAINER MODIFICATION
+
+// remove padding left/right md up
+@include media-breakpoint-up(sm) {
+	.container {
+		padding-left: $padding-container-lr-md-up;
+		padding-right: $padding-container-lr-md-up;
+	}
+}
+
+
+// ADDITIONAL GRID
+
+// growing flex for equal height of columns containing content top and bottom
+body:not(.ielte11) .flex-grow-1 {
+	flex: 1;
+}
+
+
+// EQUAL HEIGHT
+body:not(.ielte11) {
+	.eh-outer {
+		display: flex;
+		flex-direction: column;
+	}
+	.eh-inner {
+		flex: 1;
+	}
+}

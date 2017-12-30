@@ -1,0 +1,9 @@
+// icon button
+
+
+.btn > .fa:first-child + span:last-child:not(#{$button-icon-font-selector}) {
+	margin-left: $button-distance-icon-text;
+}
+.btn > span:first-child:not(:last-child):not(#{$button-icon-font-selector}) {
+	margin-right: $button-distance-icon-text;
+}

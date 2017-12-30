@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>example sticky container</title>
+		
+		<!-- css -->
+		<link href="css/style.min.css" rel="stylesheet">
+
+		<!-- favicons -->
+		<!--
+	    <link rel="icon" type="image/png" href="img/icon/favicon-16x16.png" sizes="16x16">
+	    <link rel="icon" type="image/png" href="img/icon/favicon-32x32.png" sizes="32x32">
+	    <link rel="icon" type="image/png" href="img/icon/favicon-96x96.png" sizes="96x96">
+
+	    <link rel="apple-touch-icon" href="img/apple-touch-icon-120x120.png">
+	    <link rel="apple-touch-icon" href="img/apple-touch-icon-152x152.png" sizes="152x152">
+	    <link rel="apple-touch-icon" href="img/apple-touch-icon-167x167.png" sizes="167x167">
+	    <link rel="apple-touch-icon" href="img/apple-touch-icon-180x180.png" sizes="180x180">
+	    -->
+		
+	</head>
+	
+	<body>
+
+		<a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+	
+		<div class="wrapper" id="top">
+	
+			<header class="mystyle-navbar fixed-top" data-fn="anchor-offset-elem" data-tg="sticky-container-below">
+
+				<nav class="container navbar-container">
+
+					<button class="mystyle-navbar-toggler" id="toggle-navbar-collapse" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" data-fn="toggle" data-fn-target="[data-tg='navbar-collapse']" data-tg="dropdown-multilevel-excluded">
+						<i class="fa fa-navicon" aria-hidden="true"></i>
+					</button>
+
+					<a class="mystyle-navbar-brand" href="#">
+						<img src="img/example-logo.svg" alt="blub Logo" width="136" height="27">
+					</a>
+
+					<!--
+
+					TODO: mark current nav item for sr
+						<span class="sr-only">(current)</span>
+
+					-->
+
+					<div class="mystyle-navbar-collapse" id="navbarNavDropdown" data-tg="navbar-collapse">
+
+						<ul class="mystyle-navbar-nav main-navbar-nav">
+                            <li class="hidden-nav-desktop">
+                                <a class="" href="#"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<span class="sr-only">Home</span></a>
+                            </li>
+							<li class="dropdown-big columns-3">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a0" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Lorem ipsum</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a0">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a0a" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Aliquam lorem</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a0a">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Ante in</a>
+											</li>
+											<li class="">
+												<a class="" href="#">Dapibus</a>
+											</li>
+											<li>
+												<a class="" href="#">Viverra quis</a>
+											</li>
+											<li>
+												<a class="" href="#">Feugiat a</a>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a0b" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Tellus</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a0b">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Enim</a>
+											</li>
+											<li>
+												<a class="" href="#">Eifend ac</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-big columns-3">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a1" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Dolor sit amet</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a1">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li class="">
+										<a class="" href="#">Aenean vulputate</a>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a1a" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Eleifend tellus</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a1a">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Aenean leo ligula</a>
+											</li>
+											<li>
+												<a class="" href="#">Orttitor euel</a>
+											</li>
+											<li>
+												<a class="" href="#">Consequat vitae</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-big columns-3">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a2" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Dictum</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a2">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li class="">
+										<a class="" href="#">Felis eu pede</a>
+									</li>
+									<li class="">
+										<a class="" href="#">Mollis pretium</a>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a2a" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Integer tincidunt</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a2a">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Cras dapibus</a>
+											</li>
+											<li>
+												<a class="" href="#">Vivamus</a>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a class="" href="#">Elementum</a>
+									</li>
+									<li class="">
+										<a class="" href="#">Semper</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-big columns-3">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a3" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Adipiscing elit</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a3">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a3a" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Imperdiet a</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a3a">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Venenatis</a>
+											</li>
+											<li>
+												<a class="" href="#">Vitae</a>
+											</li>
+											<li>
+												<a class="" href="#">Justo</a>
+											</li>
+											<li>
+												<a class="" href="#">Nullam</a>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a3b" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Rhoncus ut</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a3b">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Arcu</a>
+											</li>
+											<li>
+												<a class="" href="#">In enim justo</a>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a3c" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Fringilla vel</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a3c">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Aliquet nec</a>
+											</li>
+											<li>
+												<a class="" href="#">Vulputate</a>
+											</li>
+											<li>
+												<a class="" href="#">Eget</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a5" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Aenean commodo</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a5">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li>
+										<a class="" href="#">Nulla consequat</a>
+									</li>
+									<li>
+										<a class="" href="#">Pede justo</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-big columns-3">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a4" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Ligula eget</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a4">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a4a" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Ultricies nec</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a4a">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Pellentesque</a>
+											</li>
+											<li>
+												<a class="" href="#">Eu pretium quis</a>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a4b" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Donec quam felis</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a4b">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Nascetur</a>
+											</li>
+											<li>
+												<a class="" href="#">Ridiculus</a>
+											</li>
+											<li>
+												<a class="" href="#">Mus</a>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a4c" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Massa</a>
+										<ul class="" aria-labelledby="navbarDropdownMenuLink-a4c">
+											<li class="nav-item-back">
+												<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+											</li>
+											<li>
+												<a class="" href="#">Et magnis dis</a>
+											</li>
+											<li>
+												<a class="" href="#">Parturient montes</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="">
+								<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-a7" href="#" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">Cum sociis</a>
+								<ul class="" aria-labelledby="navbarDropdownMenuLink-a7">
+									<li class="nav-item-back">
+										<a class="" href="#" aria-label="Menüebene schließen" data-label="Zurück" data-fn="dropdown-multilevel-close"></a>
+									</li>
+									<li class="">
+										<a class="" href="#">Natoque penatibus</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+					</div>
+
+					<div class="collapse-backdrop" data-fn="remote-event" data-fn-target="#toggle-navbar-collapse" data-tg="dropdown-multilevel-excluded"></div>
+
+					<ul class="mystyle-navbar-nav icon-navbar-nav mystyle-navbar-nav-allmedia">
+						<li class="dropdown-big">
+							<a class="" id="navbarDropdownMenuLink-b4" href="javascript:void(0);" data-fn="dropdown-multilevel" data-fn-options="{ focusOnOpen: '[data-tg=\'header-search-input\']' }" aria-haspopup="true" aria-expanded="false" data-fn="focus-trigger"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Suche</span></a>
+							<ul class="" aria-labelledby="navbarDropdownMenuLink-b4">
+								<li class="dropdown-item-container">
+
+									<form class="dropdown-form">
+										<label class="sr-only" for="navbarSearchInput">Suchen</label>
+
+										<div class="input-group input-group-lg">
+											<input class="form-control" id="navbarSearchInput" type="text" placeholder="Suchbegriff eingeben" data-tg="header-search-input">
+											<span class="input-group-btn">
+												<button class="btn btn-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i> <span class="sr-only">Suchen</span></button>
+											</span>
+										</div>
+									</form>
+								</li>
+							</ul>
+						</li>
+						<li class="">
+							<a class="mystyle-dropdown-toggle" id="navbarDropdownMenuLink-b5" href="javascript:void(0);" data-fn="dropdown-multilevel" aria-haspopup="true" aria-expanded="false">DE</a>
+							<ul class="ul-right" aria-labelledby="navbarDropdownMenuLink-b5">
+								<li class="">
+									<a class="" href="#">EN</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</nav>
+				
+			
+			</header>
+		
+			<main id="main">
+		
+				<div class="container">
+
+					<div class="row my-4">
+
+						<div class="col-md-3">
+							
+							<div class="sticky-wrapper">
+
+								<div class="sticky-container border-bottom" data-fn="sticky-container">
+									<div class="sticky-container-inner py-4">
+									
+										<ul class="mb-0">
+											<li>Lorem ipsum dolor</li>
+											<li>Consectetuer adipiscing elit</li>
+											<li>Aenean commodo
+												<ul class="">
+													<li>Ligula eget dolor</li>
+													<li>Nascetur ridiculus mus</li>
+													<li>Donec quam felis</li>
+													<li>Cras dapibus</li>
+													<li>Quisque rutrum</li>
+												</ul>
+											</li>
+											<li>Curabitur ullamcorper ultricies
+												<ul class="">
+													<li>Maecenas tempus</li>
+													<li>Nam quam nunc</li>
+													<li>Etiam sit amet</li>
+												</ul>
+											</li>
+											<li>Blandit vel, luctus</li>
+											<li>Lorem ipsum dolor</li>
+											<li>Consectetuer adipiscing elit</li>
+											<li>Aenean commodo
+												<ul class="">
+													<li>Ligula eget dolor</li>
+													<li>Nascetur ridiculus mus</li>
+													<li>Donec quam felis</li>
+													<li>Cras dapibus</li>
+													<li>Quisque rutrum</li>
+												</ul>
+											</li>
+											<li>Curabitur ullamcorper ultricies
+												<ul class="">
+													<li>Maecenas tempus</li>
+													<li>Nam quam nunc</li>
+													<li>Etiam sit amet</li>
+												</ul>
+											</li>
+											<li>Blandit vel, luctus</li>
+											<li>Lorem ipsum dolor</li>
+											<li>Consectetuer adipiscing elit</li>
+											<li>Aenean commodo
+												<ul class="">
+													<li>Ligula eget dolor</li>
+													<li>Nascetur ridiculus mus</li>
+													<li>Donec quam felis</li>
+													<li>Cras dapibus</li>
+													<li>Quisque rutrum</li>
+												</ul>
+											</li>
+											<li>Curabitur ullamcorper ultricies
+												<ul class="">
+													<li>Maecenas tempus</li>
+													<li>Nam quam nunc</li>
+													<li>Etiam sit amet</li>
+												</ul>
+											</li>
+											<li>Blandit vel, luctus</li>
+											<li>Lorem ipsum dolor</li>
+											<li>Consectetuer adipiscing elit</li>
+											<li>Aenean commodo
+												<ul class="">
+													<li>Ligula eget dolor</li>
+													<li>Nascetur ridiculus mus</li>
+													<li>Donec quam felis</li>
+													<li>Cras dapibus</li>
+													<li>Quisque rutrum</li>
+												</ul>
+											</li>
+											<li>Curabitur ullamcorper ultricies
+												<ul class="">
+													<li>Maecenas tempus</li>
+													<li>Nam quam nunc</li>
+													<li>Etiam sit amet</li>
+												</ul>
+											</li>
+										</ul>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col-md-9 py-4">
+
+							<div class="my-4">
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+								</p>
+								
+							</div>
+
+							<div class="my-4">
+
+								<p>
+									Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+								</p>
+								
+							</div>
+
+						</div>
+
+					</div><!-- /.row -->
+
+				</div><!-- /.container -->
+
+			</main>
+
+
+			<!-- FOOTER -->
+
+			<footer class="page-footer" data-tg="sticky-container-above">
+
+				<hr>
+
+				<div class="container">
+
+					<div class="text-center my-4">
+						<img class="footer-logo" src="img/example-logo.svg" alt="blub Logo" width="136" height="27">
+					</div>
+
+					<div class="row">
+
+						<div class="col-6 col-md-3">
+							<div>
+								<strong>Amet orci</strong>
+							</div>
+							<hr class="my-1">
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Eget eros</a>
+								</li>
+								<li>
+									<a href="#">Faucibus</a>
+								</li>
+								<li>
+									<a href="#">Tincidunt</a>
+								</li>
+								<li>
+									<a href="#">Duis leo</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-md-3">
+							<div>
+								<strong>Sed fringilla</strong>
+							</div>
+							<hr class="my-1">
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Mauris sit </a>
+								</li>
+								<li>
+									<a href="#">Amet nibh</a>
+								</li>
+								<li>
+									<a href="#">Donec sodales</a>
+								</li>
+								<li>
+									<a href="#">Sagittis magna</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-md-3">
+							<div>
+								<strong>Consequat</strong>
+							</div>
+							<hr class="my-1">
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Leo eget</a>
+								</li>
+								<li>
+									<a href="#">Bibendum sodales</a>
+								</li>
+								<li>
+									<a href="#">Augue velit</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-md-3">
+							<div>
+								<strong>Cursus nunc</strong>
+							</div>
+							<hr class="my-1">
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Aenean commodo</a>
+								</li>
+								<li>
+									<a href="#">Ligula eget </a>
+								</li>
+								<li>
+									<a href="#">Dolor</a>
+								</li>
+								<li>
+									<a href="#">Aenean massa. </a>
+								</li>
+								<li>
+									<a href="#">Cum sociis</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<div class="social-list text-center">
+						<ul class="list-inline mb-0">
+							<li class="list-inline-item">
+								<a class="color-hover-facebook" href="#"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a>
+							</li>
+							<li class="list-inline-item">
+								<a class="color-hover-twitter" href="#"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a>
+							</li>
+							<li class="list-inline-item">
+								<a class="color-hover-xing" href="#"><i class="fa fa-xing"></i><span class="sr-only">Xing</span></a>
+							</li>
+							<li class="list-inline-item">
+								<a class="color-hover-rss" href="#"><i class="fa fa-rss"></i><span class="sr-only">RSS</span></a>
+							</li>
+						</ul>
+					</div>
+
+					<hr class="my-2">
+
+					<div class="row small">
+						<div class="col-sm">
+							© Copyright 2017 <a href="#" target="_blank">Lorem ipsum</a>
+						</div>
+						<div class="col-sm text-right">
+							<a href="#">Tincidunt</a>
+							  | 
+							<a href="#">Faucibus</a>
+							  | 
+							<a href="#">Nunc</a>
+						</div>
+					</div>
+
+				</div>
+				
+			</footer>
+
+			<div class="to-top-wrapper" data-fn="to-top-wrapper">
+				<a class="btn btn-secondary btn-only-icon" href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sr-only"></span></a>
+			</div>
+		
+		</div>
+		
+		<script src="js/dist/vendor.js"></script>
+		<script src="js/dist/scripts.min.js"></script>
+		
+	</body>
+	
+</html>

@@ -1,0 +1,27 @@
+// mystyle dropdown
+
+
+.dropdown-item-container {
+	padding: $dropdown-item-container-py $dropdown-item-container-px ( $dropdown-item-container-py - $dropdown-border-bottom-width ) $dropdown-item-container-px;
+}
+
+
+// form
+
+.dropdown-form {
+	margin-bottom: 0;
+}
+@include mystyle-navigation(mobile) {
+	.dropdown-form {
+		width: 100%;
+	}
+}
+@include mystyle-navigation(desktop) {
+	.dropdown-form {
+		min-width: 250px;
+	}
+}
+
+.dropdown-form .form-group {
+	margin-bottom: 0.33333rem;
+}

@@ -1,0 +1,31 @@
+// sticky container
+
+
+body {
+	position: relative;
+}
+
+#toctitle {
+	@include sr-only();
+}
+
+@include media-breakpoint-down(sm) {
+
+	.sticky-wrapper {
+		display: none;
+	}
+
+}
+
+// nav wrapper
+.sticky-wrapper {
+
+	// fixed (or static) scrolling nav
+	> .sticky-container {
+		overflow-y: auto;
+
+		&.fixed {
+			position: fixed;
+		}
+	}
+}

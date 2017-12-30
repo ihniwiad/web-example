@@ -1,0 +1,68 @@
+// banner
+
+
+// BANNER HEIGHT RELATIVE TO WINDOW HEIGHT
+
+.banner-vh-1 {
+	height: 100vh;
+}
+.banner-vh-2 {
+	height: calc(100vh - 6.25rem);
+}
+.banner-vh-3 {
+	height: calc(100vh - 12.5rem);
+}
+// min-height
+[class*="banner-vh-"] {
+	min-height: 18rem;
+}
+@media(min-height: 600px) {
+	[class*="banner-vh-"] {
+		min-height: 360px;
+	}
+}
+@media(min-height: 768px) {
+	[class*="banner-vh-"] {
+		min-height: 460px;
+	}
+}
+@media(min-height: 850px) {
+	[class*="banner-vh-"] {
+		min-height: 510px;
+	}
+}
+@media(min-height: 1000px) {
+	[class*="banner-vh-"] {
+		min-height: 600px;
+	}
+}
+
+// BANNER STATIC HEIGHT
+
+.banner-st-1 {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+
+
+// SAERCH BANNER
+
+.banner-form {
+
+	.form-control,
+	.input-group-btn > .btn {
+		font-size: inherit;
+		opacity: 0.8;
+	}
+	.input-group-btn {
+		font-size: inherit;
+	}
+	.form-control {
+		background-clip: border-box;
+	}
+	.form-control:focus {
+		border-color: $mystyle-color-greyscale-3;
+		opacity: 1;
+	}
+}

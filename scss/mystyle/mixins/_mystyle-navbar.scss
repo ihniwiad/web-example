@@ -1,0 +1,232 @@
+// mixins mystyle navbar
+
+
+
+// devide mobile & desktop nav
+
+@mixin mystyle-navigation($media-size) {
+
+	@if $mystyle-nav-devide-mobile-desktop {
+
+		@if $media-size == mobile {
+			@include media-breakpoint-down($mystyle-nav-breakpoint-mobile-down) { @content }
+		}
+		@else {
+			@include media-breakpoint-up($mystyle-nav-breakpoint-desktop-up) { @content }
+		}
+
+	}
+
+	@else {
+		@if $media-size == mobile { 
+			@content
+		}
+	}
+	
+}
+
+
+// responsive padding y
+
+@mixin make-responsive-nav-padding($paddings-y: $mystyle-nav-paddings-y) {
+
+	// remember size of previous screen interval
+	$remember-padding-y: "";
+
+	@each $breakpoint, $padding-y in $paddings-y {
+
+		// make style only if current screen interval has different size
+		@if $padding-y != $remember-padding-y {
+			@include media-breakpoint-up($breakpoint) {
+				padding-top: $padding-y;
+				padding-bottom: $padding-y;
+			}
+			$remember-padding-y: $padding-y;
+		}
+
+	}
+
+}
+
+
+// NAVBAR NAV MIXINS (make mobile or desktop looking navbar nav)
+
+// mobile
+
+@mixin make-mobile-looking-navbar-nav() {
+
+	li {
+
+		> a {
+			color: $color-mystyle-nav-mobile-text-active;
+		}
+
+		&.active > a {
+			color: $color-mystyle-nav-mobile-text-active;
+			background-color: $color-mystyle-nav-bg-hover-mobile;
+		}
+
+		ul {
+			display: none;
+			list-style: none;
+		}
+
+		&.show > ul {
+			display: block;
+		}
+
+	}
+
+	// nav toggle
+	.mystyle-dropdown-toggle {
+		&::after {
+			float: right;
+		}
+	}
+	
+}
+
+// desktop
+
+@mixin make-desktop-looking-navbar-nav() {
+	
+	li {
+		a {
+			@include hover-focus {
+				background-color: $color-mystyle-nav-bg-hover-desktop-level-1;
+			}
+		}
+	}
+
+	// only level 1
+
+	> li {
+		display: inline-flex;
+
+		// link (level 1)
+		& > a {
+			white-space: nowrap;
+
+			@include hover-focus {
+				color: $color-mystyle-nav-text-hover;
+			}
+		}
+
+		> ul {
+
+			// taken from bootstrap .dropdown-menu
+			display: none; // none by default, but block on "open" of the menu
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: $zindex-dropdown;
+			float: left;
+			min-width: $dropdown-min-width;
+			font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+			color: $body-color;
+			text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+			list-style: none;
+
+			margin: 0;
+			padding: 0;
+
+			box-shadow: $mystyle-navbar-dropdown-box-shadow;
+			clip: rect(0px, 100000px, 100000px, -1000px);
+
+			background-color: $color-mystyle-nav-dropdown-bg;
+	    	border-top: $dropdown-border-top-width solid $color-mystyle-nav-dropdown-border-top-color;
+	    	border-bottom: $dropdown-border-bottom-width solid $color-mystyle-nav-dropdown-border-top-color;
+	    	background-clip: border-box;
+		}
+
+		> ul.ul-right {
+			left: auto;
+			right: 0;
+		}
+
+		&.show {
+			> ul {
+				display: block;
+			}
+		}
+
+		&:not(.dropdown-big) {
+			ul {
+				a {
+					white-space: nowrap;
+					width: 100%;
+				}
+			}
+		}
+
+	}
+
+	// only level 2..n
+	> li ul > li {
+
+		> ul > li ul {
+			// hide level 4..
+			display: none;
+		}
+
+		> a {
+			@include hover-focus {
+				color: $color-mystyle-nav-dropdown-text-hover;
+				background-color: $color-mystyle-nav-bg-hover-desktop-level-2;
+			}
+
+			&.mystyle-dropdown-toggle {
+				&::after {
+					content: "";
+				}
+			}
+		}
+
+	}
+
+	// only level 3
+	> li > ul > li > ul > li {
+
+		> a {
+			padding-left: $dropdown-big-level-3-item-pl !important;
+		}
+
+	}
+
+	// only bigmenu
+	li.dropdown-big {
+		> ul {
+			width: 100%;
+		}
+    }
+
+	li:not(.dropdown-big) {
+
+		position: relative;
+
+		ul > li.active > a {
+			color: $color-mystyle-nav-dropdown-text-active;
+			background-color: $color-mystyle-nav-bg-hover-desktop-level-2;
+		}
+
+	}
+
+	// back button
+	.nav-item-back {
+		display: none;
+	}
+
+	// nav toggle
+	.mystyle-dropdown-toggle {
+		&::after {
+			content: $mystyle-navbar-icon-caret;
+			font-size: $mystyle-navbar-font-size-caret;
+			width: $mystyle-navbar-caret-width;
+			margin-left: $mystyle-nav-text-caret-spacer;
+		}
+	}
+
+}
+
+
+

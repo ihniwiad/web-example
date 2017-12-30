@@ -1,0 +1,39 @@
+// seach
+
+
+.search-result-item-breadcrumb {
+	list-style: none;
+	margin-top: 0.25rem;
+	margin-bottom: 0;
+	padding-left: 0;
+	font-size: 0.85rem;
+	@include clearfix()
+}
+
+.search-item-keyword {
+	font-weight: 500;
+}
+
+.search-result-item-details {
+	margin-left: 2em;
+	@include media-breakpoint-up(sm) {
+		margin-left: 3em;
+	}
+}
+
+.search-result-item {
+	margin-bottom: 2em;
+	h3,
+	h4 {
+		margin: 0;
+		font-size: 1.25rem;
+	}
+	p {
+		margin-bottom: 0.5em;
+	}
+}
+
+.cut-before::before,
+.cut-after::after {
+	content: "...";
+}

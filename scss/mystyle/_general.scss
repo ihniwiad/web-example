@@ -1,0 +1,19 @@
+// mystyle general
+
+
+
+// POSITION
+
+.p-relative {
+	position: relative;
+}
+
+
+// TEXT & BACKGROUND COLORS
+
+.text-ci-hc {
+	color: $hight-contrast-ci-color !important;
+}
+.bg-ci-hc {
+	background-color: $hight-contrast-ci-color;
+}

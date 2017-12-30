@@ -1,0 +1,37 @@
+// video
+
+
+// VIDEO PLAY BUTTON
+
+// TODO: make variables (font, icon, colors, dimensions in em)
+.has-play-button {
+	position: relative;
+}
+.has-play-button:after {
+	content: $fa-var-play;
+	font-family: FontAwesome;
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: $play-button-width;
+	height: $play-button-height;
+	margin-left: - $play-button-width / 2;
+	margin-top: - $play-button-height / 2;
+	padding-left: $play-button-padding-left;
+	border-radius: $play-button-border-raduis;
+	text-align: center;
+	vertical-align: middle;
+	font-size: $play-button-font-size;
+	line-height: 1.016667 * $play-button-height; // individual adaption
+	background-color: $play-button-bg-color;
+	color: $play-button-color;
+	box-shadow: 0 0 #{$play-button-shadow-size} 0 #{$play-button-shadow-color};
+	transition: $play-button-transition;
+	pointer-events: none;
+}
+.has-play-button:hover:after,
+.has-play-button:focus:after {
+	background-color: $play-button-bg-color-hover;
+	color: $play-button-color-hover;
+}
